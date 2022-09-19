@@ -13,7 +13,7 @@ class ProductController {
     if (!amount) return res.status(400).json({ message: '"amount" is required' });
     
     const verifyOtherFields = await this.verifyProductFields(product);
-    console.log(verifyOtherFields);
+  
     if (verifyOtherFields !== null) {
       return res.status(verifyOtherFields.status).json(verifyOtherFields.message);
     }
