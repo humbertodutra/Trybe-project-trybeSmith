@@ -17,7 +17,6 @@ export default class LoginModel {
 
       );
     const [result] = verify;
-    console.log(result);
     return result as LoginInterface[];
   }
 }
