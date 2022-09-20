@@ -6,4 +6,6 @@ const orderList = async (req: Request, res: Response) => {
   return res.status(200).json(result);
 };
 
-export default orderList;
+export default {
+  orderList,
+};

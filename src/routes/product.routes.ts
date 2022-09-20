@@ -11,7 +11,7 @@ const oi = (_req: Request, res: Response) => res.status(200).json('oi');
 
 router.post('/products', productController.createNewProduct);
 router.get('/products', productController.getAllProducts);
-router.get('/orders', orderList);
+router.get('/orders', orderList.orderList);
 router.post('/orders', jwtAuth, oi);
 
 export default router;
