@@ -6,13 +6,6 @@ import User from '../interfaces/user.interface';
 
 dotenv.config();
 
-// interface ReturnVerify{
-//   status: number
-//   message: {
-//     message: string
-//   }
-// }
-
 class UserController {
   constructor(private userService = new UserService()) {}
 
