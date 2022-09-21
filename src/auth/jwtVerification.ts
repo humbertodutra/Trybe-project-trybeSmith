@@ -16,7 +16,6 @@ const jwtAuth = (req: Request, res: Response, next: NextFunction) => {
     next();
   } catch (err) {
     res.status(401).json({ message: 'Invalid token' });
-    throw new Error('401|Invalid token');
   }
 };
 
