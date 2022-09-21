@@ -14,7 +14,6 @@ const getUserId = (token:string):JwtPayload => {
 
 const create = async (token: Token, productsIds: number[]):Promise<OrderListI> => {
   const { data } = getUserId(token.token);
-  console.log(productsIds);
   const orderId = await ordersModel.orderCreate(data.userId);
   await Promise.all(productsIds.map((id) => 
     new ProductModel(connection).editProduct({ id, orderId })));
