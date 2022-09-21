@@ -13,8 +13,7 @@ const createController = async (req: Request, res: Response) => {
     token: req.headers.authorization,
   };
   const { productsIds } = req.body;
-  console.log(productsIds);
-  
+     
   const verifyReq = verify(productsIds);
   if (verifyReq !== null) {
     return res.status(verifyReq.status).json(verifyReq.message);
