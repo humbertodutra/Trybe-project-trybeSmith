@@ -25,7 +25,7 @@ class LoginController {
       return res.status(401).json({ message: 'Username or password invalid' });
     }
 
-    const secret = process.env.JWT_SECRET || 'seusecretdetoken';
+    const secret = 'seusecretdetoken';
     const jwtConfig:SignOptions = {
       expiresIn: '7d',
       algorithm: 'HS256',

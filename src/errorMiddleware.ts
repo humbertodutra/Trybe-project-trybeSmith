@@ -1,6 +1,6 @@
 const verify = (productsIds: number[]) => {
   const products = productsIds;
-  if (products === undefined) {
+  if (!products) {
     return { status: 400, message: { message: '"productsIds" is required' } };
   }
 

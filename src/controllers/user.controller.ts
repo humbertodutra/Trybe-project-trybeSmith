@@ -20,7 +20,7 @@ class UserController {
     const createNewUser = await this.userService.createNewUser(newUser);
     const { id } = createNewUser;
 
-    const secret = process.env.JWT_SECRET || 'seusecretdetoken';
+    const secret = 'seusecretdetoken';
 
     const jwtConfig:SignOptions = {
       expiresIn: '7d',

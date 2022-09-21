@@ -5,12 +5,12 @@ import { Request, Response, NextFunction } from 'express';
 dotenv.config();
 
 const jwtAuth = (req: Request, res: Response, next: NextFunction) => {
-  const jwtSecret = process.env.JWT_SECRET || 'minhachavesecreta';
+  const jwtSecret = 'seusecretdetoken';
 
   const token:string = req.headers.authorization || '';
 
   if (!token) res.status(401).json({ message: 'Token not found' });
-
+  
   try {
     jwt.verify(token, jwtSecret);
     next();
